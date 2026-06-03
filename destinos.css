@@ -137,13 +137,20 @@ header {
     border-radius: 8px;
     font-size: 14px;
     color: #333;
-    background: #fff;
+    background-color: #fff;
     cursor: pointer;
-    appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("assets/flecha.png");
     background-repeat: no-repeat;
+    
+    /* CONTROL DE TAMAÑO: Reducimos la flecha aquí (puedes probar con 10px o 12px) */
+    background-size: 12px auto;
+    
+    /* POSICIONAMIENTO: Se mantiene a 13px de la derecha y centrada verticalmente */
     background-position: right 13px center;
+    
     outline: none;
     transition: border-color .2s;
 }
