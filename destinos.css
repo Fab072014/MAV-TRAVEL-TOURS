@@ -1,0 +1,499 @@
+/* ESTILOS GENERALES Y CONFIGURACIÓN BASE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f4f0;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. BARRA DE NAVEGACIÓN (Navbar unificada)*/
+header {
+    background-color: rgb(8, 37, 77);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.barra-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-navegacion .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.barra-navegacion .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.barra-navegacion .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.barra-navegacion .menu a:hover,
+.barra-navegacion .menu a.activo {
+    background-color: rgb(183, 96, 8);
+    border-radius: 4px;
+}
+
+.btn-reservar {
+    background-color: rgb(183, 96, 8);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-reservar:hover {
+    background-color: rgb(145, 75, 5);
+}
+
+/* 2. PORTADA DESTINOS (Hero)*/
+.portada-destinos {
+    background: #f4f4f0;
+    padding: 90px 20px 70px;
+    text-align: center;
+}
+
+.portada-contenido h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #08254d;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+.portada-contenido p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* 3. SECCIÓN DE FILTROS*/
+.seccion-filtros {
+    background: #f4f4f0;
+    padding: 0 0 50px;
+}
+
+.barra-filtros {
+    background: #fff;
+    border: 1px solid #e2e6ed;
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.filtro-campo label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #08254d;
+    letter-spacing: 0.3px;
+}
+
+.filtro-campo select {
+    padding: 11px 38px 11px 14px;
+    border: 1.5px solid #dde2eb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.filtro-campo select:focus {
+    border-color: #08254d;
+}
+
+.btn-filtrar {
+    background: #08254d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    height: 44px;
+    transition: background .2s;
+}
+
+.btn-filtrar:hover {
+    background: #0b2f62;
+}
+
+/* 4. CATÁLOGO / CUADRÍCULA DE TARJETAS*/
+.catalogo-destinos {
+    padding: 0 0 100px;
+    background: #f4f4f0;
+}
+
+.cuadricula-destinos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 55px;
+}
+
+.tarjeta-destino {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.tarjeta-destino:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.13);
+}
+
+/* IMAGEN DE TARJETA */
+.tarjeta-imagen {
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    background: #dde2ea;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.tarjeta-destino:hover .tarjeta-imagen img {
+    transform: scale(1.06);
+}
+
+/* ETIQUETAS (BADGES) */
+.tarjeta-etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.tarjeta-etiqueta.popular { background: #c56b13; color: #fff; }
+.tarjeta-etiqueta.relax { background: #c56b13; color: #fff; }
+.tarjeta-etiqueta.nuevo { background: #08254d; color: #fff; }
+
+/* CUERPO DE LA TARJETA */
+.tarjeta-info {
+    padding: 18px 18px 16px;
+}
+
+.tarjeta-info h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0d1b2e;
+    margin-bottom: 3px;
+}
+
+.tarjeta-lugar {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* DETALLES (META) */
+.tarjeta-detalles {
+    display: flex;
+    gap: 14px;
+    padding: 11px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 14px;
+}
+
+.tarjeta-detalles span {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* PIE DE LA TARJETA */
+.tarjeta-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta-pie small {
+    font-size: 11px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.tarjeta-precio {
+    font-size: 28px;
+    font-weight: 800;
+    color: #c56b13;
+    line-height: 1;
+}
+
+.btn-ver-detalle {
+    background: #08254d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.btn-ver-detalle:hover {
+    background: #0b2f62;
+}
+
+/* 5. PAGINACIÓN*/
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-pag {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1.5px solid #dde2eb;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-pag:hover {
+    border-color: #08254d;
+    color: #08254d;
+}
+
+.btn-pag.activo {
+    background: #08254d;
+    color: #fff;
+    border-color: #08254d;
+}
+
+.pag-siguiente {
+    background: #fff;
+    color: #555;
+    width: auto;
+    padding: 0 15px;
+}
+
+/* 6. PIE DE PÁGINA (Footer integrado)*/
+.pie-pagina {
+    background-color: #08254d;
+    color: white;
+    margin-top: 40px;
+}
+
+.pie-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pie-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.pie-columna h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pie-columna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.pie-columna p {
+    font-size: 14px;
+    color: #bcc6d4;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pie-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie-columna a {
+    color: #bcc6d4;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+.pie-columna a:hover {
+    color: #fff;
+}
+
+.pie-iconos {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.pie-iconos span {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+}
+
+.pie-iconos span:hover {
+    filter: grayscale(0%);
+}
+
+.pie-abajo {
+    background-color: #051833;
+    color: #bcc6d4;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 7. RESPONSIVE / ADAPTABLE*/
+@media (max-width: 1024px) {
+    .cuadricula-destinos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-navegacion {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .barra-navegacion .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 30px;
+    }
+
+    .barra-filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtro-campo {
+        width: 100%;
+    }
+
+    .btn-filtrar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cuadricula-destinos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .pie-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .pie-iconos {
+        justify-content: center;
+    }
+}

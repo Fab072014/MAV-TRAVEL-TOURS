@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAV Travel - Descubre experiencias diseñadas para conectar con la naturaleza, la cultura y la aventura en nuestros destinos exclusivos.">
+    <title>MAV Travel - Reservar Ahora</title>
+    <link rel="stylesheet" href="reservar.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-navegacion">
+            <div class="logo">MAV Travel</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="reservar.html" class="btn-reservar">Reservar Ahora</a>
+        </nav>
+    </header>
+
+    <section class="portada-destinos portada-reserva-bg">
+        <div class="portada-contenido">
+            <h1>Empieza tu Viaje</h1>
+            <p>Personaliza tu experiencia y asegura tu lugar en la próxima gran aventura.<br>
+            Completa los datos solicitados a continuación para gestionar tu reserva.</p>
+        </div>
+    </section>
+
+    <section class="catalogo-destinos">
+        <div class="contenedor">
+            
+            <div class="cuadricula-reserva">
+                
+                <div class="tarjeta-formulario">
+                    
+                    <div class="pasos-reserva">
+                        <span class="paso activo">1. Datos Personales</span>
+                        <span class="paso">2. El Viaje</span>
+                        <span class="paso">3. Pago</span>
+                    </div>
+
+                    <form class="formulario-reserva" action="#" method="POST">
+                        
+                        <h3 class="titulo-formulario">Información Personal</h3>
+                        
+                        <div class="grupo-formulario">
+                            <div class="filtro-campo">
+                                <label for="reserva-nombre">Nombre Completo</label>
+                                <input type="text" id="reserva-nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="filtro-campo">
+                                <label for="reserva-email">Correo Electrónico</label>
+                                <input type="email" id="reserva-email" name="email" placeholder="juan@ejemplo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="filtro-campo">
+                            <label for="reserva-tel">Teléfono de Contacto</label>
+                            <input type="tel" id="reserva-tel" name="telefono" placeholder="+51 000 000 000" required>
+                        </div>
+
+                        <h3 class="titulo-formulario">Detalles del Viaje</h3>
+
+                        <div class="grupo-formulario">
+                            <div class="filtro-campo">
+                                <label for="filtro-destino">Destino</label>
+                                <select id="filtro-destino" name="destino">
+                                    <option value="oxapampa">Oxapampa</option>
+                                    <option value="huancayo">Huancayo</option>
+                                    <option value="cusco">Cusco</option>
+                                </select>
+                            </div>
+                            <div class="filtro-campo">
+                                <label for="reserva-fecha">Fecha de Salida</label>
+                                <input type="date" id="reserva-fecha" name="fecha_salida" required>
+                            </div>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <div class="filtro-campo">
+                                <label for="reserva-adultos">Adultos</label>
+                                <input type="number" id="reserva-adultos" name="adultos" value="2" min="1">
+                            </div>
+                            <div class="filtro-campo">
+                                <label for="reserva-ninos">Niños</label>
+                                <input type="number" id="reserva-ninos" name="ninos" value="0" min="0">
+                            </div>
+                        </div>
+
+                        <h3 class="titulo-formulario">Servicios Adicionales</h3>
+                        
+                        <div class="opciones-checkbox">
+                            <label class="opcion-check">
+                                <input type="checkbox" name="servicios[]" value="seguro"> 
+                                <span>Seguro de Viaje</span>
+                                <small>S/.45 /persona</small>
+                            </label>
+                            <label class="opcion-check">
+                                <input type="checkbox" name="servicios[]" value="traslados"> 
+                                <span>Traslados</span>
+                                <small>S/.60 /grupo</small>
+                            </label>
+                            <label class="opcion-check">
+                                <input type="checkbox" name="servicios[]" value="guia"> 
+                                <span>Guía Premium</span>
+                                <small>S/.120 /día</small>
+                            </label>
+                        </div>
+
+                        <p class="nota-terminos">
+                            Al hacer clic en "Confirmar Reserva", aceptas nuestros términos y condiciones y política de privacidad.
+                        </p>
+
+                        <button class="btn-filtrar" type="submit">
+                            Confirmar Reserva
+                        </button>
+
+                    </form>
+                </div>
+
+                <div class="tarjeta-resumen">
+                    <div class="tarjeta-info">
+                        <h3 class="titulo-resumen">Resumen del Viaje</h3>
+                        
+                        <div class="tarjeta-detalles">
+                            <p><strong>Paquete Seleccionado</strong> <span>Oxapampa</span></p>
+                            <p><strong>Pasajeros</strong> <span>2 Adultos</span></p>
+                            <p><strong>Duración</strong> <span>2 Noches</span></p>
+                        </div>
+
+                        <div class="tarjeta-pie">
+                            <p><strong>Subtotal</strong> <span>S/.1700.00</span></p>
+                            <p class="tarjeta-precio"><strong>Total</strong> <span>S/.1700.00</span></p>
+                        </div>
+
+                        <div class="alertas-seguridad">
+                            <span>Pago Seguro con Encriptación SSL</span>
+                            <span>Confirmación Instantánea</span>
+                        </div>
+                    </div>
+
+                    <div class="soporte-ayuda">
+                        <p>¿Necesitas ayuda?</p>
+                        <a href="tel:+51919633243">Llámanos al +51 919 633 243</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="pie-contenedor">
+
+            <div class="pie-columna">
+                <h2>MAV Travel</h2>
+                <p>Expertos en crear experiencias memorables en los rincones más fascinantes del mundo.</p>
+            </div>
+
+            <div class="pie-columna">
+                <h3>Explorar</h3>
+                <a href="destinos.html">Destinos</a>
+                <a href="sobrenosotros.html">Sobre Nosotros</a>
+            </div>
+
+            <div class="pie-columna">
+                <h3>Legal</h3>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+
+            <div class="pie-columna">
+                <h3>Contacto</h3>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+        </div>
+
+        <div class="pie-abajo">
+            © 2026 MAV Travel. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

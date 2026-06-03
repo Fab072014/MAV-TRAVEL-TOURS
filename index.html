@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAV Travel - Experiencias diseñadas para viajeros que buscan lo extraordinario en cada destino.">
+    <title>MAV Travel | Inicio</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-navegacion">
+            <div class="logo">MAV Travel</div>
+            <ul class="menu">
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="reservar.html" class="btn-reservar">Reservar Ahora</a>
+        </nav>
+    </header>
+
+    <section class="banner-principal">
+        <div class="contenido-banner">
+            <h1>Descubre el Mundo con Expertos</h1>
+            <p>Experiencias diseñadas para viajeros que buscan lo extraordinario en cada destino.</p>
+            
+            <form class="barra-buscador" role="search">
+                <div class="buscador-campo">
+                    <label for="origen">Origen</label>
+                    <input type="text" id="origen" placeholder="¿De dónde sale?" autocomplete="off">
+                </div>
+
+                <div class="buscador-campo">
+                    <label for="destino">Destino</label>
+                    <input type="text" id="destino" placeholder="¿A dónde vas?" autocomplete="off">
+                </div>
+
+                <div class="buscador-campo">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha">
+                </div>
+
+                <button class="btn-buscar" type="submit">
+                    Buscar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="seccion-destacados">
+        <div class="contenedor">
+            <div class="titulo-seccion-encabezado">
+                <div>
+                    <h2>Destinos Destacados</h2>
+                    <p>Selecciones exclusivas para tu próxima aventura.</p>
+                </div>
+                <a href="destinos.html" class="enlace-ver-todos">Ver todos →</a>
+            </div>
+
+            <div class="cuadricula-destinos">
+                <div class="tarjeta-destino">
+                    <div class="tarjeta-imagen">
+                        <img src="assets/CañondeShucto.jpg" alt="Cañón de Shucto">
+                        <span class="tarjeta-etiqueta popular">MÁS POPULAR</span>
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Cañón de Shucto</h3>
+                        <p class="tarjeta-lugar">📍 Junín</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-destino">
+                    <div class="tarjeta-imagen">
+                        <img src="assets/LagunadePaca.jpg" alt="Laguna de Paca">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Laguna de Paca</h3>
+                        <p class="tarjeta-lugar">📍 Junín</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-destino">
+                    <div class="tarjeta-imagen">
+                        <img src="assets/Cataratabayoz.jpg" alt="Catarata Bayoz">
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Catarata Bayoz</h3>
+                        <p class="tarjeta-lugar">📍 Junín</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-ofertas">
+        <div class="contenedor">
+            <span class="subtitulo-ofertas">OPORTUNIDADES ÚNICAS</span>
+            <h2 class="titulo-ofertas-seccion">Ofertas de Temporada</h2>
+
+            <div class="ofertas-contenedor-grid">
+                <div class="lista-ofertas-bloque">
+                    <article class="tarjeta-oferta-horizontal">
+                        <img src="assets/Oxapampa.png" alt="Vista de Oxapampa">
+                        <div class="info-oferta-horizontal">
+                            <span class="etiqueta-oferta">TODO INCLUIDO</span>
+                            <h3>Oxapampa</h3>
+                            <p>3 días y 2 noches de descanso en hotel ecológico.</p>
+                            <div class="pie-oferta-horizontal">
+                                <span class="precio-oferta">S/ 850</span>
+                                <a href="#">Ver detalle</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-oferta-horizontal">
+                        <img src="assets/Ayacucho.jpg" alt="Plaza Mayor de Ayacucho">
+                        <div class="info-oferta-horizontal">
+                            <span class="etiqueta-oferta">ESCAPADA A LA CIUDAD</span>
+                            <h3>Ayacucho</h3>
+                            <p>4 días y 3 noches explorando la historia de Ayacucho.</p>
+                            <div class="pie-oferta-horizontal">
+                                <span class="precio-oferta">S/ 749</span>
+                                <a href="#">Ver detalle</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="panel-promocional">
+                    <h3>Arequipa en Familia</h3>
+                    <p>Reserva antes del 30 de junio y obtén un 20% de descuento en paquetes con hospedaje en hoteles seleccionados.</p>
+                    <ul>
+                        <li><span class="check-icono">✓</span> Hospedaje en hotel cómodo y seguro.</li>
+                        <li><span class="check-icono">✓</span> Tours guiados a los principales atractivos.</li>
+                        <li><span class="check-icono">✓</span> Alimentación incluida durante el viaje.</li>
+                    </ul>
+                    <button type="button" class="btn-promo">Más Información</button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-testimonios">
+        <div class="contenedor">
+            <h2>Historias de Viajeros</h2>
+            <div class="cuadricula-testimonios">
+                <article class="tarjeta-testimonio">
+                    <p>"La organización fue excelente. Disfrutamos cada momento del viaje."</p>
+                    <footer>— <cite>Elena Rodríguez</cite></footer>
+                </article>
+
+                <article class="tarjeta-testimonio">
+                    <p>"Una experiencia inolvidable. Todo estuvo muy bien coordinado."</p>
+                    <footer>— <cite>Carlos Méndez</cite></footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="pie-contenedor">
+            <div class="pie-columna">
+                <h2>MAV Travel</h2>
+                <p>Expertos en crear experiences inolvidables en los destinos más exóticos del Perú.</p>
+                <div class="pie-redes-texto">
+                    <span>Síguenos en nuestras redes sociales</span>
+                </div>
+            </div>
+
+            <div class="pie-columna">
+                <h3>NAVEGACIÓN</h3>
+                <a href="destinos.html">Destinos</a>
+                <a href="sobrenosotros.html">Sobre Nosotros</a>
+                <a href="#">Blog de Viajes</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div class="pie-columna">
+                <h3>DESTINOS POPULARES</h3>
+                <a href="#">Cañón de Shucto</a>
+                <a href="#">Laguna de Paca</a>
+                <a href="#">Oxapampa</a>
+                <a href="#">Catarata Bayoz</a>
+            </div>
+
+            <div class="pie-columna">
+                <h3>SOPORTE</h3>
+                <a href="#">Centro de Ayuda</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Libro de Reclamaciones</a>
+            </div>
+        </div>
+
+        <div class="pie-abajo">
+            © 2026 MAV Travel. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

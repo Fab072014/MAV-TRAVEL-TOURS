@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAV Travel - Descubre experiencias diseñadas para conectar con la naturaleza, la cultura y la aventura en nuestros destinos exclusivos.">
+    <title>MAV Travel - Destinos</title>
+    <link rel="stylesheet" href="destinos.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-navegacion">
+            <div class="logo">MAV Travel</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="destinos.html" class="activo">Destinos</a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="reservar.html" class="btn-reservar">Reservar Ahora</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada-destinos">
+            <div class="portada-contenido">
+                <h1>Explora Nuestros Destinos</h1>
+                <p>Desde los paisajes andinos del Valle del Mantaro hasta la exuberante selva central,<br>
+                descubre experiencias diseñadas para conectar con la naturaleza, la cultura y la aventura.</p>
+            </div>
+        </section>
+
+        <section class="seccion-filtros">
+            <div class="contenedor">
+                <form class="barra-filtros" role="search">
+                    <div class="filtro-campo">
+                        <label for="filtro-region">Región</label>
+                        <select id="filtro-region">
+                            <option>Todas las regiones</option>
+                            <option>Junín</option>
+                            <option>Selva central</option>
+                            <option>Arequipa</option>
+                            <option>América del Sur</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-campo">
+                        <label for="filtro-precio">Precio Máximo</label>
+                        <select id="filtro-precio">
+                            <option>Cualquier precio</option>
+                            <option>Hasta S/ 100</option>
+                            <option>Hasta S/ 300</option>
+                            <option>Hasta S/ 600</option>
+                            <option>Hasta S/ 1000</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-campo">
+                        <label for="filtro-categoria">Categoría</label>
+                        <select id="filtro-categoria">
+                            <option>Todas las categorías</option>
+                            <option>Aventura</option>
+                            <option>Relax</option>
+                            <option>Cultural</option>
+                            <option>Naturaleza</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-filtrar" type="submit">
+                        🔍 Filtrar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="catalogo-destinos">
+            <div class="contenedor">
+                <div class="cuadricula-destinos">
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/CañondeShucto.jpg" alt="Cañón de Shucto">
+                            <span class="tarjeta-etiqueta popular">MÁS POPULAR</span>
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Cañón de Shucto</h3>
+                            <p class="tarjeta-lugar">📍 Junín</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 1 día</span>
+                                <span>🥾 Moderado</span>
+                                <span>👥 Máx. 12</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 65</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/LagunadePaca.jpg" alt="Laguna de Paca">
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Laguna de Paca</h3>
+                            <p class="tarjeta-lugar">📍 Junín</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 1 día</span>
+                                <span>🥾 Fácil</span>
+                                <span>👥 Máx. 15</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 55</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/Oxapampa.png" alt="Oxapampa">
+                            <span class="tarjeta-etiqueta relax">ESCAPADA RELAX</span>
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Oxapampa</h3>
+                            <p class="tarjeta-lugar">📍 Selva central</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 3 Días</span>
+                                <span>🥾 Fácil</span>
+                                <span>👥 Máx. 10</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 850</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/Cataratabayoz.jpg" alt="Catarata Bayoz">
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Catarata Bayoz</h3>
+                            <p class="tarjeta-lugar">📍 Junín</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 2 días</span>
+                                <span>🥾 Moderado</span>
+                                <span>👥 Máx. 6</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 180</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/Ayacucho.jpg" alt="Ayacucho">
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Ayacucho</h3>
+                            <p class="tarjeta-lugar">📍 América del Sur</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 4 Días</span>
+                                <span>🥾 Moderado</span>
+                                <span>👥 Máx. 8</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 749</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-destino">
+                        <div class="tarjeta-imagen">
+                            <img src="assets/Arequipa.jpg" alt="Arequipa">
+                            <span class="tarjeta-etiqueta nuevo">NUEVO</span>
+                        </div>
+                        <div class="tarjeta-info">
+                            <h3>Arequipa</h3>
+                            <p class="tarjeta-lugar">📍 Arequipa</p>
+                            <div class="tarjeta-detalles">
+                                <span>🕒 4 días</span>
+                                <span>🥾 Aventura</span>
+                                <span>👥 Máx. 12</span>
+                            </div>
+                            <div class="tarjeta-pie">
+                                <div>
+                                    <small>Desde</small>
+                                    <p class="tarjeta-precio">S/ 899</p>
+                                </div>
+                                <button class="btn-ver-detalle" type="button">Ver Detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="paginacion">
+                    <button class="btn-pag activo" type="button">1</button>
+                    <button class="btn-pag" type="button">2</button>
+                    <button class="btn-pag" type="button">3</button>
+                    <button class="btn-pag pag-siguiente" type="button">Siguiente </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-contenedor">
+            <div class="pie-columna">
+                <h2>MAV Travel</h2>
+                <p>Expertos en crear experiencias inolvidables en los destinos más exóticos del Perú.</p>
+                <div class="pie-iconos">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="pie-columna">
+                <h3>NAVEGACIÓN</h3>
+                <ul class="pie-lista">
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Blog de Viajes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="pie-columna">
+                <h3>DESTINOS POPULARES</h3>
+                <ul class="pie-lista">
+                    <li><a href="#">Cañón de Shucto</a></li>
+                    <li><a href="#">Laguna de Paca</a></li>
+                    <li><a href="#">Oxapampa</a></li>
+                    <li><a href="#">Catarata Bayoz</a></li>
+                </ul>
+            </div>
+
+            <div class="pie-columna">
+                <h3>SOPORTE</h3>
+                <ul class="pie-lista">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Libro de Reclamaciones</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pie-abajo">
+            &copy; 2026 MAV Travel. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

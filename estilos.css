@@ -1,0 +1,631 @@
+/* ESTILOS GENERALES Y CONFIGURACIÓN BASE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f0;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. BARRA DE NAVEGACIÓN*/
+header {
+    background-color: rgb(8, 37, 77);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.barra-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-navegacion .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.barra-navegacion .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.barra-navegacion .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.barra-navegacion .menu a:hover,
+.barra-navegacion .menu a.activo {
+    background-color: rgb(183, 96, 8);
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-reservar {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(183, 96, 8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-reservar:hover {
+    background-color: rgb(145, 75, 5);
+}
+
+/* 2. PORTADA BANNER PRINCIPAL CON BUSCADOR*/
+.banner-principal {
+    background-image: linear-gradient(rgba(8, 37, 77, 0.45), rgba(8, 37, 77, 0.55)), url("assets/Huancayo.png");
+    background-size: cover;
+    background-position: center;
+    padding: 110px 20px 90px;
+    text-align: center;
+    color: white;
+}
+
+.contenido-banner h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.contenido-banner p {
+    font-size: 16px;
+    color: #f4f4f0;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto 35px;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.barra-buscador {
+    background: #fff;
+    border: 1px solid #e2e6ed;
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.buscador-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    text-align: left;
+}
+
+.buscador-campo label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #08254d;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.buscador-campo input {
+    padding: 11px 14px;
+    border: 1.5px solid #dde2eb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    outline: none;
+    transition: border-color .2s;
+    width: 100%;
+    height: 44px;
+}
+
+.buscador-campo input:focus {
+    border-color: #08254d;
+}
+
+.btn-buscar {
+    background: #08254d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 44px;
+    transition: background .2s;
+}
+
+.btn-buscar:hover {
+    background: #0b2f62;
+}
+
+/* 3. SECCIÓN DESTINOS DESTACADOS*/
+
+.seccion-destacados {
+    padding: 70px 0;
+    background: #f4f4f0;
+}
+
+.titulo-seccion-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion-encabezado h2 {
+    font-size: 32px;
+    color: #08254d;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.titulo-seccion-encabezado p {
+    font-size: 15px;
+    color: #666;
+}
+
+.enlace-ver-todos {
+    color: #c56b13;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.enlace-ver-todos:hover {
+    color: #145755;
+}
+
+.cuadricula-destinos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-destino {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.tarjeta-destino:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.13);
+}
+
+.tarjeta-imagen {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #dde2ea;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.tarjeta-destino:hover .tarjeta-imagen img {
+    transform: scale(1.06);
+}
+
+.tarjeta-etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+.tarjeta-etiqueta.popular { background: #c56b13; color: #fff; }
+
+.tarjeta-info {
+    padding: 20px;
+}
+
+.tarjeta-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d1b2e;
+    margin-bottom: 5px;
+}
+
+.tarjeta-lugar {
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 4. SECCIÓN OFERTAS DE TEMPORADA*/
+.seccion-ofertas {
+    background: #ebebe6;
+    padding: 70px 0;
+}
+
+.subtitulo-ofertas {
+    font-size: 11px;
+    font-weight: 800;
+    color: #c56b13;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.titulo-ofertas-seccion {
+    font-size: 32px;
+    color: #08254d;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.ofertas-contenedor-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.lista-ofertas-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-oferta-horizontal {
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+
+.tarjeta-oferta-horizontal:hover {
+    transform: scale(1.01);
+}
+
+.tarjeta-oferta-horizontal img {
+    width: 200px;
+    height: 100%;
+    min-height: 150px;
+    object-fit: cover;
+}
+
+.info-oferta-horizontal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.etiqueta-oferta {
+    font-size: 9px;
+    background: #08254d;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.info-oferta-horizontal h3 {
+    font-size: 20px;
+    color: #0d1b2e;
+    margin-bottom: 5px;
+}
+
+.info-oferta-horizontal p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.pie-oferta-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.precio-oferta {
+    font-size: 22px;
+    font-weight: 800;
+    color: #c56b13;
+}
+
+.pie-oferta-horizontal a {
+    color: #08254d;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.panel-promocional {
+    background: #08254d;
+    color: white;
+    padding: 35px 30px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(8, 37, 77, 0.15);
+}
+
+.panel-promocional h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.panel-promocional p {
+    font-size: 14px;
+    color: #dde2eb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.panel-promocional ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.panel-promocional ul li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f4f4f0;
+}
+
+.check-icono {
+    color: #c56b13;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-promo {
+    background: #c56b13;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+}
+
+.btn-promo:hover {
+    background: #a4560f;
+}
+
+/* 5. SECCIÓN TESTIMONIOS*/
+.seccion-testimonios {
+    padding: 70px 0;
+    background: #f4f4f0;
+    text-align: center;
+}
+
+.seccion-testimonios h2 {
+    font-size: 32px;
+    color: #08254d;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.cuadricula-testimonios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+article.tarjeta-testimonio {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border-left: 5px solid #c56b13;
+    text-align: left;
+}
+
+article.tarjeta-testimonio p {
+    font-size: 15px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+article.tarjeta-testimonio footer {
+    font-size: 13px;
+    font-weight: 700;
+    color: #08254d;
+}
+
+/* 6. PIE DE PÁGINA*/
+.pie-pagina {
+    background-color: #08254d;
+    color: white;
+    margin-top: 40px;
+}
+
+.pie-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pie-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.pie-columna h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pie-columna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.pie-columna p {
+    font-size: 14px;
+    color: #bcc6d4;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pie-columna a {
+    color: #bcc6d4;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.pie-columna a:hover {
+    color: #fff;
+}
+
+.pie-redes-texto {
+    font-size: 14px;
+    color: #bcc6d4;
+    margin-top: 10px;
+}
+
+.pie-abajo {
+    background-color: #051833;
+    color: #bcc6d4;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 7. RESPONSIVE / ADAPTABLE*/
+@media (max-width: 1024px) {
+    .cuadricula-destinos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ofertas-contenedor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-navegacion {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .barra-navegacion .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Corrección aplicada en los elementos responsive del Banner */
+    .contenido-banner h1 {
+        font-size: 32px;
+    }
+
+    .barra-buscador {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buscador-campo {
+        width: 100%;
+    }
+
+    .btn-buscar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cuadricula-destinos, .cuadricula-testimonios {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-oferta-horizontal {
+        flex-direction: column;
+    }
+
+    .tarjeta-oferta-horizontal img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .pie-contenedor {
+        grid-template-columns: 1fr;
+    }
+}

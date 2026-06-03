@@ -1,0 +1,490 @@
+/* ESTILOS GENERALES Y CONFIGURACIÓN BASE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f4f0;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. BARRA DE NAVEGACIÓN*/
+header {
+    background-color: rgb(8, 37, 77);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.barra-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-navegacion .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.barra-navegacion .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.barra-navegacion .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.barra-navegacion .menu a:hover,
+.barra-navegacion .menu a.activo {
+    background-color: rgb(183, 96, 8);
+    border-radius: 4px;
+}
+
+.btn-reservar {
+    background-color: rgb(183, 96, 8);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .2s;
+}
+
+.btn-reservar:hover {
+    background-color: rgb(145, 75, 5);
+}
+
+/* 2. PORTADA RESERVA*/
+.portada-destinos.portada-reserva-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('assets/Oxapampa.png') no-repeat center center;
+    background-size: cover;
+    padding: 140px 20px 120px;
+    text-align: center;
+    width: 100%;
+}
+
+.portada-contenido h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.portada-contenido p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* 3. SECCIÓN RESERVA*/
+.catalogo-destinos {
+    padding: 50px 0 80px;
+    background: #f4f4f0;
+}
+
+.cuadricula-reserva {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.pasos-reserva {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid #eef2f5;
+    margin-bottom: 35px;
+    gap: 25px;
+}
+
+.pasos-reserva .paso {
+    font-size: 13px;
+    font-weight: 600;
+    color: #999;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.pasos-reserva .paso.activo {
+    color: #c56b13;
+}
+
+.pasos-reserva .paso.activo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #c56b13;
+}
+
+.tarjeta-formulario {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+.formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.titulo-formulario {
+    font-size: 18px;
+    font-weight: 700;
+    color: #08254d;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grupo-formulario {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.grupo-formulario .filtro-campo {
+    flex: 1;
+    min-width: 220px;
+}
+
+.filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.filtro-campo label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+}
+
+.filtro-campo input[type="text"],
+.filtro-campo input[type="email"],
+.filtro-campo input[type="tel"],
+.filtro-campo input[type="number"],
+.filtro-campo input[type="date"],
+.filtro-campo select {
+    padding: 12px 14px;
+    border: 1.5px solid #dde2eb;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filtro-campo input:focus,
+.filtro-campo select:focus {
+    border-color: #08254d;
+}
+
+.opciones-checkbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.opcion-check {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1.5px solid #dde2eb;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.opcion-check input {
+    margin-bottom: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #08254d;
+}
+
+.opcion-check:hover {
+    background: #f8fafc;
+    border-color: #b8c5d6;
+}
+
+.opcion-check small {
+    font-size: 11px;
+    color: #888;
+    font-weight: 400;
+}
+
+.nota-terminos {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.tarjeta-formulario .btn-filtrar {
+    background: #9c4a0c;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 8px;
+    width: auto;
+    min-width: 240px;
+    margin-top: 15px;
+    transition: background .2s, transform 0.1s;
+}
+
+.tarjeta-formulario .btn-filtrar:hover {
+    background: #823d09;
+}
+
+.tarjeta-formulario .btn-filtrar:active {
+    transform: scale(0.98);
+}
+
+.tarjeta-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-resumen .tarjeta-info {
+    background: #041d3d;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.titulo-resumen {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.tarjeta-resumen .tarjeta-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 0 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tarjeta-resumen .tarjeta-detalles p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta-resumen .tarjeta-detalles strong {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.tarjeta-resumen .tarjeta-pie {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tarjeta-resumen .tarjeta-pie p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tarjeta-resumen .tarjeta-pie .tarjeta-precio {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e07a1b;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.alertas-seguridad {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.soporte-ayuda {
+    background: linear-gradient(rgba(4, 29, 61, 0.85), rgba(4, 29, 61, 0.85)), url('img/soporte-bg.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.soporte-ayuda p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+.soporte-ayuda a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+/* 4. PIE DE PÁGINA*/
+.pie-pagina {
+    background-color: #08254d;
+    color: white;
+    margin-top: 40px;
+}
+
+.pie-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pie-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.pie-columna h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pie-columna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.pie-columna p {
+    font-size: 14px;
+    color: #bcc6d4;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pie-columna a {
+    color: #bcc6d4;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.pie-columna a:hover {
+    color: #fff;
+}
+
+.pie-abajo {
+    background-color: #051833;
+    color: #bcc6d4;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 5. RESPONSIVE / ADAPTABLE*/
+@media (max-width: 1024px) {
+    .cuadricula-reserva {
+        grid-template-columns: 1fr;
+    }
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-navegacion {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .barra-navegacion .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .portada-contenido h1 {
+        font-size: 32px;
+    }
+    .opciones-checkbox {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-formulario {
+        padding: 20px;
+    }
+    .pie-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
